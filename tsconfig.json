@@ -1,0 +1,17 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "declarationDir": "dist",
+    "jsx": "react-jsx",
+    "paths": {
+      "@example-mf/*": ["./*"]
+    },
+    "strict": true,
+    "skipLibCheck": true,
+    "target": "esnext"
+  },
+  "files": ["src/example-mf.tsx"],
+  "include": ["src/**/*"],
+  "exclude": ["dist/**/*"]
+}

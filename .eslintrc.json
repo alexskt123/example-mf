@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "jest-dom", "testing-library"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react",
+    "prettier"
+  ],
+  "rules": {
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "max-len": ["error", { "code": 120 }],
+    "no-console": ["error", { "allow": ["info", "warn", "error"] }],
+    "no-param-reassign": [
+      "error",
+      { "props": true, "ignorePropertyModificationsForRegex": ["^draft"] }
+    ],
+    "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off"
+  },
+  "ignorePatterns": ["webpack.config.js"]
+}
